@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo list</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="topnav">
+<ul>
+   <li><a href="https://codepen.io/ASDBUDDY/full/VwjKqdv">Home</a></li>
+   <li><a href="https://www.google.com/calendar/">Calendar</a></li>
+   <li><a href="https://codepen.io/tanaygandhi/full/XWKNWbN">About</a></li>
+  <li style="float:right"><span id="datetime"></span></li>
+  <script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+</script>
+  <li style="float:right"> <img src="https://images-ext-1.discordapp.net/external/HJi5TGuIimiXVODLO3Dx6Rj1RRa1BY0pR_sJv43av0U/https/i.imgur.com/2jWWT3T.png" alt="ReWorck_Logo" width="60" height="50"> </li>
+                  </ul>
+                  </div>           
+    <div class="all-tasks main-content">
+      <h2 class="task-list-title">My Lists</h2>
+      <ul class="task-list" data-lists></ul>
+
+      <form action="" data-new-list-form>
+        <input 
+          type="text"
+          class="new list"
+          data-new-list-input
+          placeholder="new list name"
+          aria-label="new list name"
+        />
+        <button class="btn create" aria-label="create new list">+</button>
+      </form>
+    </div>
+
+    <div class="todo-list main-content" data-list-display-container>
+      <div class="todo-header">
+        <h2 class="list-title" data-list-title></h2>
+        <p class="task-count" data-list-count></p>
+      </div>
+
+      <div class="todo-body" data-list-display-container-body>
+        <div class="tasks" data-tasks></div>
+
+        <div class="new-task-creator">
+            <form action="" data-new-task-form>
+                <input 
+                  type="text"
+                  data-new-task-input
+                  class="new task"
+                  placeholder="new task name"
+                  aria-label="new task name"
+                />
+                <button class="btn create" aria-label="create new task">+</button>
+              </form>
+        </div>
+
+        <div class="delete-stuff">
+          <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
+          <button class="btn delete" data-delete-list-button>Delete list</button>
+        </div>
+      </div>
+    </div>
+
+   
+    </div>
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
+  </body>
+</html>
