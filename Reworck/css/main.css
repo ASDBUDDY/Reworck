@@ -188,7 +188,7 @@ form {
   color: var(--clr-bright);
 }
 
-[type=checkbox] {
+[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
@@ -229,18 +229,18 @@ form {
 }
 
 .task:hover .custom-checkbox,
-[type=checkbox]:focus + label .custom-checkbox {
+[type="checkbox"]:focus + label .custom-checkbox {
   transform: scale(1.2);
   color: var(--clr-dark);
 }
 
-[type=checkbox]:checked + label .custom-checkbox {
+[type="checkbox"]:checked + label .custom-checkbox {
   background: var(--clr-dark);
   border-color: var(--clr-bright);
   box-shadow: inset 0 0 0px 2px white;
 }
 
-[type=checkbox]:checked + label {
+[type="checkbox"]:checked + label {
   opacity: 0.5;
 }
 
@@ -258,7 +258,7 @@ form {
   transition: transform 150ms ease-in-out;
 }
 
-[type=checkbox]:checked + label::after {
+[type="checkbox"]:checked + label::after {
   transform: scaleX(1);
   transform-origin: left;
 }

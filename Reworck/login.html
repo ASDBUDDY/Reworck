@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reworck SignUp</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="css/styling.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href="//fonts.googleapis.com/css?family=Comfortaa:300,300i,400,400i,700,700i" rel="stylesheet">
+
+</head>
+<body>
+	<!-- main -->
+	<div class="main-layouts wrapper">
+    <h1>Login to Reworck </h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="#" method="post" login-form>
+					<input id="login-email" class="text" type="text" name="Email" placeholder="Email" required="">
+
+
+					<input id="login-password" class="text w3lpass" type="password" name="password" placeholder=" Password" required="">
+					<div class="wthree-text">
+						<label class="anim">
+							
+						
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<p style = "color: red" login-up-error ></p>
+					<input type="submit" value="Let's Reworck">
+					
+</a>
+				</form>
+<p><a href="#"> Forgot Password</a></p>
+				<p>Don't have an  Account? <a href="signUp.html"> Sign Up with Reworck</a></p>
+
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="colorlibcopy-agile">
+			<p>© 2020 Reworck Inc. A Product by Students of MUJ<a href="https://sites.google.com/view/unload-thewebsite/home" target="_blank"> | Our Website</a></p>
+		</div>
+		<!-- //copyright -->
+			</div>
+    <!-- //main -->
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDopi_yR0w3B78B-gdO0dY5_vBarNZr1B4",
+    authDomain: "reworck-73596.firebaseapp.com",
+    databaseURL: "https://reworck-73596.firebaseio.com",
+    projectId: "reworck-73596",
+    storageBucket: "reworck-73596.appspot.com",
+    messagingSenderId: "612608413852",
+    appId: "1:612608413852:web:1e126cd137ce3d9d525d59",
+    measurementId: "G-9CD13H9YQS"
+  };
+  // Initialize Firebase
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
+  
+  firebase.analytics();
+  // Auth references
+  const auth = firebase.auth();
+</script>
+
+<script defer src="scripts/auth.js"></script>
+</body>
+</html>

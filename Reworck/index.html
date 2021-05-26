@@ -10,14 +10,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <script defer src="script.js"></script>
+    
   </head>
 
   <body>
     <div class="topnav">
 <ul>
-   <li><a href="https://codepen.io/ASDBUDDY/full/VwjKqdv">Home</a></li>
+   <li><a href="landingPage.html">Home</a></li>
    <li><a href="https://www.google.com/calendar/">Calendar</a></li>
+   <li><a href="#" logout>Logout</a></li>
    <li><a href="https://codepen.io/tanaygandhi/full/XWKNWbN">About</a></li>
   <li style="float:right"><span id="datetime"></span></li>
   <script>
@@ -82,5 +83,57 @@ document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +
         </label>
       </div>
     </template>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDopi_yR0w3B78B-gdO0dY5_vBarNZr1B4",
+    authDomain: "reworck-73596.firebaseapp.com",
+    databaseURL: "https://reworck-73596.firebaseio.com",
+    projectId: "reworck-73596",
+    storageBucket: "reworck-73596.appspot.com",
+    messagingSenderId: "612608413852",
+    appId: "1:612608413852:web:1e126cd137ce3d9d525d59",
+    measurementId: "G-9CD13H9YQS"
+  };
+  // Initialize Firebase
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
+  
+  firebase.analytics();
+  // Auth and firestore references
+  const db = firebase.firestore();
+  const auth = firebase.auth();
+
+  // update firestore
+  db.settings({ timestampsInSnapshots: true});
+</script>
+
+<script defer src="scripts/auth.js"></script>
+<script defer src="scripts/app.js"></script>
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "9bbf416c-4714-4c89-aafb-f8bf49ab864a", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "9f3c028d-c87d-4361-b0c2-8171221e57f1", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
   </body>
 </html>
